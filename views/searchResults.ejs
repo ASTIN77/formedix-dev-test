@@ -1,0 +1,23 @@
+<% include partials/header %>
+        
+    <!-- Display Photo Results Box -->
+    
+    <div class="jumbotron">
+            <div class="landing-header">
+                        <h1><span class="R">R</span><span class="E">E</span><span class="S">S</span>
+                            <span class="U">U</span><span class="L">L</span><span class="T">T</span>
+                            <span class="S">S</span></h1> 
+                </div>
+        <div class="results">
+            <% photoResults.photos.photo.forEach(function(result){ %>
+                <div class="col-md-2 col-sm-2">
+                    <div class="thumbnail">
+                        <a href="https://farm<%= result.farm %>.staticflickr.com/<%= result.server %>/<%= result.id %>_<%= result.secret %>_c.jpg">
+                            <img src="https://farm<%= result.farm %>.staticflickr.com/<%= result.server %>/<%= result.id %>_<%= result.secret %>_s.jpg" /></a>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+      
+<% include partials/footer %>

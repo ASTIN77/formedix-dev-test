@@ -9,6 +9,14 @@
   "author": "Andrew Tinsley",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "session-memory-store": "^0.2.2",
+    "xml2js": "^0.4.19"
   }
 }
