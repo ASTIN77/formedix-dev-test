@@ -1,6 +1,21 @@
+body,
+html {
+	height: 100%;
+	overflow: scroll;
+	background-color: #f1b500;
+}
+
+
 .searchHeader {
     padding-bottom: 20px;
     text-align: center;
+}
+
+.boxed {
+  
+  width: 80%;
+ margin: 25px auto;
+	border-radius: 20px;
 }
 
 .boxDisplay{
@@ -20,13 +35,14 @@
 	color: #fff;
 }
 
-.results {
-    overflow: scroll;
+.spacer {
+   padding-top: 50px;
+
 }
 
 h1 {
   font-family: "Bevan";
-  font-size: 9.375vw;
+  font-size: 6.375vw;
   font-weight: 400;
   line-height: 85%;
   color: #fff;
@@ -63,16 +79,6 @@ h1 span:nth-child(5) {
     z-index: 7;
     text-shadow:0px 0px 0 rgb(167,42,152),-1px 1px 0 rgb(162,37,147),-2px 2px 0 rgb(158,33,143),-3px 3px 0 rgb(154,29,139),-4px 4px 0 rgb(149,24,134),-5px 5px 0 rgb(145,20,130),-6px 6px 0 rgb(141,16,126),-7px 7px 0 rgb(136,11,121),-8px 8px 0 rgb(132,7,117),-9px 9px 0 rgb(128,3,113),-10px 10px 0 rgb(123,-2,108),-11px 11px 0 rgb(119,-6,104),-12px 12px 0 rgb(114,-11,99),-13px 13px 0 rgb(110,-15,95),-14px 14px 0 rgb(106,-19,91),-15px 15px 0 rgb(101,-24,86),-16px 16px 0 rgb(97,-28,82),-17px 17px 0 rgb(93,-32,78),-18px 18px 0 rgb(88,-37,73),-19px 19px 0 rgb(84,-41,69), -20px 20px 0 rgb(80,-45,65);
   }
-/*.R { 
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 14px;
-  -ms-transform: rotate(25deg);
-  -moz-transform: rotate(25deg);
-  -o-transform: rotate(45deg);
-  -webkit-transform: rotate(25deg);
-  transform: rotate(25deg);
-}*/
 
 .R, .E, .S, .U, .L, .T, .S {
     -ms-transform: rotate(25deg);
@@ -86,9 +92,20 @@ h1 span:nth-child(5) {
 }
 
 .landing-header {
-    width: 90%;
-    margin: 0 auto;
+    width: 70%;
+    margin: 100px auto;
+    background-color: lightblue;
+    border-radius: 50%;
     text-align: center;
     justify-content: center;
     padding-bottom: 100px;
+  }
+  
+  .results {
+    margin-top: 100px;
+  }
+  
+  .button {
+    text-align: center;
+    margin: 20px auto;
   }
