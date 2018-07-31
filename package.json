@@ -1,0 +1,14 @@
+{
+  "name": "formedix",
+  "version": "1.0.0",
+  "description": "Developer Test - Formedix Flickr App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Tinsley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
