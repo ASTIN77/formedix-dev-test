@@ -2,11 +2,11 @@ Formedix Flickr Application By Andrew Tinsley
 
 Description:
 
-A simply app that takes a search term and searched the Flickr Portal using a non-commercial
-API to return photos of the search criteria
+A simple app that takes a search term and searches the Flickr Portal using a non-commercial
+API to return photos that apply to the search criteria.
 
-This displays the maxiumum number of images per serach request ( currently 500) and returns them
-on a new pages enabling you to scroll down to the end of the results.
+This displays the maxiumum number of images per serach request (currently 500) and returns them
+on a new page enabling you to scroll down to the end of the results.
 
 Installation:
 
