@@ -22,9 +22,7 @@ app.use(function(req,res, next){
       res.locals.confirm = req.flash("confirm");
       next(); });
      
-// use port 3000 unless there exists a preconfigured port
-let port = process.env.port || 3000;
-
+app.set('port', process.env.PORT);
 app.get("/", (req,res) => {
     res.render("index");
 });
@@ -35,36 +33,18 @@ app.post("/", (req,res) => {
    var url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&tags='"+ searchTerms +"'&text='"+ searchTerms +"'&per_page=4000&api_key=832d60890a927ccd7396a6a27244a300&format=json&nojsoncallback=1";
     
     
-//    axios.get(url)
-//        .then(function(response) {
-//        var searchResults = response.data;
-//        res.render("searchResults", {photoResults: searchResults});
-//    })
-//    .catch(function(error) {
-//        req.flash("error", "Search criteria returned zero results");
-//        res.redirect("back");
-//    });
-
-    async function getPost() {
-        const postResponse = await fetch("https://api.flickr.com/services/rest/?method=flickr.photos.search&tags='"+ searchTerms +"'&text='"+ searchTerms + 
-                                            "'&per_page=48&api_key=832d60890a927ccd7396a6a27244a300&format=json&nojsoncallback=1");
-         const postData = await postResponse.json();     
-         addDataToResultsPage(data);                              
-    }
-
-    function addDataYoResultsPage(data) {
-
-        
-    }
-
-
+   axios.get(url)
+       .then(function(response) {
+       var searchResults = response.data;
+       res.render("searchResults", {photoResults: searchResults});
+   })
+   .catch(function(error) {
+       req.flash("error", "Search criteria returned zero results");
+       res.redirect("back");
+   });
     
 });
-<<<<<<< HEAD
-app.listen(port, () => console.log(`Formedix Flickr Successfully Started on port ${ port }`));
-=======
-// Work required
+
 app.listen(app.get('port'), function(){
       console.log('Formedix Flickr Successfully Started');
       });
->>>>>>> 1bd0099a16d84cb0a0296dff1836fa9c9531541f
