@@ -17,7 +17,6 @@
     "ejs": "^2.7.4",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-<<<<<<< HEAD
     "session-memory-store": "^0.2.2",
     "xml2js": "^0.4.23"
   },
@@ -30,9 +29,4 @@
     "url": "https://github.com/ASTIN77/formedix-dev-test/issues"
   },
   "homepage": "https://github.com/ASTIN77/formedix-dev-test#readme"
-=======
-    "session-memory-store": "^1.0.0",
-    "xml2js": "^0.4.23"
-  }
->>>>>>> dev
 }
