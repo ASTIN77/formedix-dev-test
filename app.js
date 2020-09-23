@@ -58,6 +58,6 @@ app.post("/", (req,res) => {
 
     
 });
-app.listen(app.get('port'), function(){
+app.listen(process.env.PORT, process.env.IP, function(){
       console.log('Formedix Flickr Successfully Started');
       });
