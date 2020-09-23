@@ -61,6 +61,6 @@ app.post("/", (req,res) => {
 
     
 });
-app.listen(app.get('port'), function(){
+app.listen(process.env.port, function(){
       console.log('Formedix Flickr Successfully Started');
       });
