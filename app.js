@@ -22,9 +22,6 @@ app.use(function(req,res, next){
       res.locals.confirm = req.flash("confirm");
       next(); });
      
-// use port 3000 unless there exists a preconfigured port
-let port = process.env.port // || 3000;
-console.group(port)
 
 app.get("/", (req,res) => {
     res.render("index");
@@ -61,6 +58,6 @@ app.post("/", (req,res) => {
 
     
 });
-app.listen(process.env.port, function(){
+app.listen(app.get('port'), function(){
       console.log('Formedix Flickr Successfully Started');
       });
