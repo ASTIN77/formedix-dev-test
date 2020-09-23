@@ -23,7 +23,7 @@ app.use(function(req,res, next){
       next(); });
      
 // use port 3000 unless there exists a preconfigured port
-let port = process.env.port || 3000;
+let port = process.env.port // || 3000;
 console.group(port)
 
 app.get("/", (req,res) => {
