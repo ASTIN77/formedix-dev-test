@@ -60,11 +60,6 @@ app.post("/", (req,res) => {
 
     
 });
-<<<<<<< HEAD
-app.listen(port, () => console.log(`Formedix Flickr Successfully Started on port ${ port }`));
-=======
-// Work required
 app.listen(app.get('port'), function(){
       console.log('Formedix Flickr Successfully Started');
       });
->>>>>>> 1bd0099a16d84cb0a0296dff1836fa9c9531541f
