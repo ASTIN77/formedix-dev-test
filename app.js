@@ -6,6 +6,7 @@ const express             =       require('express'),
       flash               =       require('connect-flash'),
       app                 =       express();
       
+const port = 3000;
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -33,31 +34,19 @@ app.post("/", (req,res) => {
    var url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&tags='"+ searchTerms +"'&text='"+ searchTerms +"'&per_page=4000&api_key=832d60890a927ccd7396a6a27244a300&format=json&nojsoncallback=1";
     
     
-//    axios.get(url)
-//        .then(function(response) {
-//        var searchResults = response.data;
-//        res.render("searchResults", {photoResults: searchResults});
-//    })
-//    .catch(function(error) {
-//        req.flash("error", "Search criteria returned zero results");
-//        res.redirect("back");
-//    });
-
-    async function getPost() {
-        const postResponse = await fetch("https://api.flickr.com/services/rest/?method=flickr.photos.search&tags='"+ searchTerms +"'&text='"+ searchTerms + 
-                                            "'&per_page=48&api_key=832d60890a927ccd7396a6a27244a300&format=json&nojsoncallback=1");
-         const postData = await postResponse.json();     
-         addDataToResultsPage(data);                              
-    }
-
-    function addDataYoResultsPage(data) {
-
-        
-    }
-
-
+   axios.get(url)
+       .then(function(response) {
+       var searchResults = response.data;
+       res.render("searchResults", {photoResults: searchResults});
+   })
+   .catch(function(error) {
+       req.flash("error", "Search criteria returned zero results");
+       res.redirect("back");
+   });
     
 });
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(port, () => {
+    console.log(process.env.IP)
+    console.log(process.env.PORT)
       console.log('Formedix Flickr Successfully Started');
       });
