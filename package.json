@@ -19,7 +19,7 @@
     "express-session": "^1.17.1",
     "nvm": "^0.0.4",
     "session-memory-store": "^1.0.0",
-    "xml2js": "^0.4.23"
+    "xml2js": "^0.5.0"
   },
   "repository": {
     "type": "git",
